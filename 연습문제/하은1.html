@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 예제</title>
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .title {
+            font-size: 48px;
+            font-weight: bold;
+            padding: 20px;
+            text-align: left;
+            color: #000;
+            text-shadow: 2px 2px 8px #FF0000, 4px 4px 10px #FFA500, 6px 6px 15px #FFFF00, 8px 8px 20px #FF4500;
+            margin: 0;
+            position: relative;
+            background: linear-gradient(to right, white, white);
+        }
+
+        .title::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(255,0,0,0.8), rgba(255,165,0,0.6), rgba(255,255,0,0.4));
+            mix-blend-mode: screen;
+            animation: flickerEffect 2s infinite;
+            opacity: 0.7;
+        }
+
+        @keyframes flickerEffect {
+            0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+                opacity: 0.99;
+            }
+            20%, 24%, 55% {
+                opacity: 0.4;
+            }
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas:
+                "header header header"
+                "nav section aside"
+                "footer footer footer";
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: auto 1fr auto;
+            height: 67vh; /* 3분의 2 높이 */
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        header {
+            grid-area: header;
+            background-color: pink;
+            color: black;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav, section, aside {
+            height: 100%;
+        }
+
+        nav {
+            grid-area: nav;
+            background-color: cyan;
+            padding: 10px;
+            color: black;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        section {
+            grid-area: section;
+            background-color: peachpuff;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        aside {
+            grid-area: aside;
+            background-color: lightgreen;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: purple;
+            padding: 10px;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .quote {
+            padding: 20px;
+            margin-top: 20px;
+            font-size: 20px;
+            color: black;
+            font-weight: bold;
+        }
+
+        .green {
+            background-color: limegreen;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        ul li {
+            color: black;
+            font-weight: bold;
+        }
+
+        ul li::marker {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="title">Hi I'm Haeun</div>
+
+    <div class="container">
+        <header>header</header>
+
+        <nav>nav</nav>
+
+        <section>section
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>jQuery</li>
+            </ul>
+            <div class="quote yellow">Life Quotes<br>All you need in this life is ignorance and</div>
+            <div class="quote green">Life Quotes<br>The two most important days in your life are the day you are born and the day you find out why</div>
+        </section>
+
+        <aside>aside</aside>
+
+        <footer>footer</footer>
+    </div>
+
+</body>
+</html>
