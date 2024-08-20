@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 예제</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: grid;
+            grid-template-areas: 
+                "header header header"
+                "nav content aside"
+                "footer footer footer";
+            grid-template-rows: auto 1fr auto;
+            grid-template-columns: 200px 1fr 200px;
+            height: 100vh;
+        }
+
+        .header {
+            grid-area: header;
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .sidebar {
+            grid-area: nav;
+            background-color: #f44336;
+            padding: 20px;
+            color: white;
+        }
+
+        .sidebar h2 {
+            margin: 0;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 15px 0;
+        }
+
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .content {
+            grid-area: content;
+            background-color: #ffeb3b;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 2개의 칸으로 분할 */
+            gap: 10px;
+        }
+
+        .article {
+            background-color: #ececec;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .article h2 {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .sidebar-right {
+            grid-area: aside;
+            background-color: #03A9F4;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            font-size: 1.2em; /* 아티클 제목과 동일한 글씨 크기 */
+            font-weight: bold; /* 아티클 제목과 동일한 글씨 굵기 */
+        }
+
+        .footer {
+            grid-area: footer;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>헤더</h1>
+    </header>
+
+    <nav class="sidebar">
+        <h2>네비게이터</h2>
+        <ul>
+            <li><a href="https://www.naver.com">홈</a></li>
+            <li><a href="https://www.naver.com">서비스</a></li>
+            <li><a href="https://www.naver.com">연락처</a></li>
+        </ul>
+    </nav>
+
+    <section class="content">
+        <div class="article">
+            <h2>아티클 1</h2>
+            <p>첫 번째 </p>
+        </div>
+        <div class="article">
+            <h2>아티클 2</h2>
+            <p>두 번째 </p>
+        </div>
+        <div class="article">
+            <h2>아티클 3</h2>
+            <p>세 번째 </p>
+        </div>
+        <div class="article">
+            <h2>아티클 4</h2>
+            <p>네 번째 </p>
+        </div>
+    </section>
+
+    <aside class="sidebar-right">
+        <p>사이드바<br></p>
+    </aside>
+
+    <footer class="footer">
+        <p>푸터 </p>
+    </footer>
+</body>
+</html>
