@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>체크박스 제어</title>
+</head>
+<body>
+    <form>
+        <label><input type="checkbox" id="checkbox1"> Java</label><br>
+        <label><input type="checkbox" id="checkbox2"> DataBase</label><br>
+        <label><input type="checkbox" id="checkbox3"> Web</label><br><br>
+        <button type="button" onclick="FirstCheckboxOnly()">클릭</button>
+    </form>
+
+    <script>
+        function FirstCheckboxOnly() {
+            // 모든 체크박스를 해제
+            document.getElementById("checkbox1").checked = false;
+            document.getElementById("checkbox2").checked = false;
+            document.getElementById("checkbox3").checked = false;
+            
+            // 첫 번째 체크박스만 체크함
+            document.getElementById("checkbox1").checked = true;
+        }
+    </script>
+</body>
+</html>

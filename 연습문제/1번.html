@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숫자 더하기</title>
+</head>
+<body>
+    <h2>input 태그에 숫자를 입력하고 버튼을 클릭하면, +10이 된 값을 alert으로 출력해 주세요</h2>
+    <input type="number" id="numberInput" placeholder="숫자 입력">
+    <button onclick="addTen()">클릭</button>
+
+    <script>
+        function addTen() {
+            // input 값 가져오기
+            const input = document.getElementById("numberInput").value;
+            
+            // 입력된 값을 숫자로 변환하고 10 더하기, 만약 +input이 아닌 그냥 input을 사용하면 숫자 10이 문자열로 바뀌어 510을 반환
+            const result = +input + 10;
+
+            // 결과를 alert로 출력
+            alert("alert으로 출력된 값: " + result);
+        }
+    </script>
+</body>
+</html>
