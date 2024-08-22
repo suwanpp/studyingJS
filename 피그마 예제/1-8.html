@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카드 예제</title> 
+    <style>
+        .card {
+            width: 150px; 
+            border: 1px solid #ccc; 
+            border-radius: 4px; 
+            margin-top: 16px;
+            margin-left: 16px;
+            overflow: hidden; /* 카드 내부의 내용이 넘칠 경우 숨김 처리 */
+        }
+        .card-image {
+            width: 160px;
+            height: 172px;
+            background: url("ab.jpg") no-repeat center center;
+            background-size: cover; /* 배경 이미지가 영역을 가득 채우도록 설정 */
+            background-position: center; /* 배경 이미지의 위치를 중앙으로 설정 */
+        }
+        .card-text {
+            height: 70px;
+            padding: 10px;        
+            color: white; 
+            background-color: #CA785C;
+        }
+        .card-title {
+            font-size: 14px;
+            margin-bottom: 5px; 
+        }
+        .card-footer {
+            display: flex; 
+            justify-content: space-between; 
+        }
+        .card-author {
+            font-size: 12px; 
+            text-align: left;
+        }
+        .card-date {
+            font-size: 12px; 
+            text-align: right;
+        }
+    </style>
+</head>
+<body> 
+    <div class="card">
+        <div class="card-image">
+            <img src= "width: 100%; height: 100%; object-fit: cover;"> 
+        </div>
+        <div class="card-text">
+            <div class="card-title">인테리어란?</div> 
+            <div class="card-author">김작가</div> 
+            <div class="card-date">2024.01.01</div> 
+        </div>
+    </div>
+    
+
+</body> 
+</html> 
