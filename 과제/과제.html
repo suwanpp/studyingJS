@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정부24</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .text1 {
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        header {
+            background-color: #092f54;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }         
+
+        .header-links{
+            margin-right: 60px;
+        }
+        
+        .header-links a {
+            color: white;
+            font-weight: bold;
+            margin-left: 15px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .hlink1:hover, .hlink2:hover, .hlink3:hover, .hlink4:hover, .hlink5:hover, .hlink6:hover{
+            text-decoration: underline;            
+        }   
+
+
+        nav {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: white;
+        }
+        .nav-center {
+            display: flex;
+            gap: 70px;
+            font-size: 24px;
+            font-weight: bold;
+            color: black;
+        }
+
+        .nav-center span {
+            cursor: pointer;
+        }  
+
+        .hr1{
+            border: 0;
+            height: 3px;
+            background: black;
+        }
+
+        .button1:hover{
+            color: blue;
+
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            width: 1850px;
+            padding: 20px;
+            background: white;
+        }      
+
+        .right-box {
+            width: 470px;
+            height: 450px;
+            border: 2px solid black;
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .login-button {
+            background-color: #007bff;
+            width: 390px;
+            height: 30px;
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 50px;
+        }
+
+        .links {
+            cursor: pointer;
+                      
+            text-decoration: none;
+            display: block;
+        } 
+        .link1:hover, .link2:hover, .link3:hover {
+            text-decoration: underline;
+        }  
+        
+        .left{
+            margin-top: 40px;
+            float: left;
+        }
+
+        .right{
+            margin-top: 40px;
+            float: right;
+        }
+             
+        .main-input-search{
+           width: 600px;
+           height: 50px;
+           border-color: rgb(64, 64, 233);
+           border-radius: 10px;
+        }
+
+        label{
+            position: relative;
+            margin-right: 20px;
+        }
+
+        button{
+            position: absolute;
+            left: 7px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="eg_logo.png" style="margin-left: 28px;"> 
+                <span class="text1">이 누리집은 대한민국 공식 전자정부 누리집입니다.</span>
+            </div>
+            <div class="header-links">
+                <a href="#" class="hlink1">for foreigner ▼</a> 
+                <a href="https://kids.gov.kr/main.ds" class="hlink2">어린이</a>
+                <a href="https://www.gov.kr/portal/govSumry?Mcode=11005" class="hlink3">정부24소개</a>
+                <a href="https://www.gov.kr/nlogin/?Mcode=10003" class="hlink4">로그인</a>
+                <a href="https://www.gov.kr/nlogin/" class="hlink5">인증센터</a>
+                <a href="#" class="hlink6">화면크기 <span>-</span> 100% <span>+</span></a>
+                </span>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <img src="정부24.png" style="height: 40px; margin-left: 30px; cursor: pointer;">
+         <div class="nav-center">
+            <span class="button1">MyGOV</span>
+            <span class="button1">민원서비스</span>
+            <span class="button1">보조금24</span>
+            <span class="button1">정책정보</span>
+            <span class="button1">고객센터</span>
+        </div>
+        <div>
+            <img src="search.png" style="height: 30px; margin-right: 40px; cursor: pointer;">
+            <img src="menu.png"  style="height: 30px; margin-right: 80px; cursor: pointer;">
+        </div>
+    </nav>
+    <hr class="hr1"><br>
+    <main>
+        <div class="container">
+            <div class="left-box">                
+                <img src="메인.png" style="height: 400px; width: 1300px;">
+                <div class="serach-box">
+                    <div class="tit"> 자주찾는 검색</div>
+                    <div class="input-search">                        
+                            <label>
+                            <input type="text" class="main-input-search"     placeholder="찾으시는 서비스를 입력하세요" title="검색어 입력">
+                            <button type="button">
+                             <img src="돋보기.PNG" style="cursor: pointer;"></button>
+                        </label>                       
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-box">
+                <img src="정부24세로.png" style="height: 150px; margin-top: 30px;";>
+                <p style="font-size:20px; font-weight:bold;">내게 필요한 민원/생활/혜택<br>
+                    정보를 확인하세요.</p>
+                    <div class="login-button">로그인</div>
+                    <div class="links">
+                        <div class="left">
+                            <span class="link1">아이디찾기</span> | 
+                            <span class="link2">비밀번호찾기</span>
+                        </div>
+                        <div class="right"> 
+                        <span class="link3">회원가입</span>
+                        </div>
+            </div>
+        </div>
+           
+            
+    </main>
+
+
+</body>
+</html>
