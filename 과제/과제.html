@@ -33,7 +33,6 @@
             color: white;
             font-weight: bold;
             margin-left: 15px;
-            text-decoration: none;
             font-size: 14px;
         }
 
@@ -103,8 +102,7 @@
         }
 
         .links {
-            cursor: pointer;
-                      
+            cursor: pointer;                      
             text-decoration: none;
             display: block;
         } 
@@ -121,7 +119,7 @@
             margin-top: 40px;
             float: right;
         }
-             
+
         .main-input-search{
            width: 600px;
            height: 50px;
@@ -138,6 +136,88 @@
             position: absolute;
             left: 7px;
         }
+
+        .footer {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            flex-wrap: wrap;
+            background-color: #f8f8f8;
+        }
+
+        .footer-text {
+        width: 100%;
+        text-align: left;
+        margin-left: 20px;
+        margin-top: 5px;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        }
+   
+
+        .service-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin:30px;
+            padding: 10px;
+            background-color: white;
+            border-radius: 10px;
+            width: 150px;
+            height: 150px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .circle {
+            width: 40px;
+            height: 40px;
+            background-color: #00b894;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-bottom: 30px;
+        }
+
+        .circle.pink {
+            background-color: #ff7675; 
+        }
+
+        .label1 {
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+       
+        a.service-item[href="passport.html"]:hover {
+            border: 3px solid #ff7675;
+            
+        }
+
+        a.service-item[href="car.html"]:hover {
+            border: 3px solid #00b894;
+            
+        }
+
+        a.service-item[href="#"]:hover{
+            border: 3px solid #00b894;
+        }
+
+        
+      
+        .service-item .circle {
+            text-decoration: none;
+        }
+        
     </style>
 </head>
 <body>
@@ -159,7 +239,7 @@
         </div>
     </header>
     <nav>
-        <img src="정부24.png" style="height: 40px; margin-left: 30px; cursor: pointer;">
+        <img src="정부24.png" style="height: 40px; margin-left: 30px; cursor: pointer;"> 
          <div class="nav-center">
             <span class="button1">MyGOV</span>
             <span class="button1">민원서비스</span>
@@ -203,11 +283,43 @@
                         <span class="link3">회원가입</span>
                         </div>
             </div>
-        </div>
-           
-            
+        </div>           
     </main>
+    <footer class="footer">
+        <div class="footer-text">자주찾는 서비스</div>
+        <a href="#" class="service-item">
+            <div class="circle">발급</div>
+            <div class="label1">토지(임야) <br> 대장</div>
+        </a>
+        <a href="#" class="service-item">
+            <div class="circle">발급</div>
+            <div class="label1">주민등록등본<br>(초본)</div>
+        </a>
+        <a href="car.html" class="service-item">
+            <div class="circle">발급</div>
+            <div class="label1">자동차<br> 등록원부</div>
 
-
+        </a>
+        <a href="#" class="service-item">
+            <div class="circle">발급</div>
+            <div class="label1">건축물대장</div>
+        </a>
+        <a href="#" class="service-item">
+            <div class="circle">발급</div>
+            <div class="label1">가족관계<br> 증명서</div>
+        </a>
+        <a href="passport.html" class="service-item">
+            <div class="circle pink">신청</div>
+            <div class="label1">여권 재발급</div>
+        </a>
+        <a href="#" class="service-item">
+            <div class="circle">발급</div>
+            <div class="label1">지방세 <br>납세증명</div>
+        </a>
+        <a href="#" class="service-item">
+            <div class="circle">발급</div>
+            <div class="label1">납세증명</div>
+        </a>
+    </footer>
 </body>
 </html>

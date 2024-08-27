@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>여권</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        .button1:hover{
+            color: blue;
+
+        }
+        
+        li{
+            padding: 0;
+            border: 0;
+            vertical-align: baseline;
+            word-break: break-all;
+            display: list-item;
+            unicode-bidi: isolate;
+        }
+
+        ul{
+            list-style: none;
+        }
+
+         body {
+            margin: 0;
+            line-height: 1.5;
+        }
+        .text1 {
+            font-weight: bold;
+            font-size: 14px;
+            letter-spacing: -1px;
+        }
+
+        header {
+            background-color: #092f54;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }         
+
+        .header-links{
+            margin-right: 60px;
+        }
+        
+        .header-links a {
+            color: white;
+            font-weight: bold;
+            margin-left: 15px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .hlink1:hover, .hlink2:hover, .hlink3:hover, .hlink4:hover, .hlink5:hover, .hlink6:hover{
+            text-decoration: underline;            
+        } 
+        nav {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: white;
+        }
+        .nav-center {
+            display: flex;
+            gap: 70px;
+            font-size: 24px;
+            font-weight: bold;
+            color: black;
+        }
+
+        .nav-center span {
+            cursor: pointer;
+        }
+               
+        .breadcrumbs-wrap{
+            border-bottom: 1px solid #ebe9e9;
+            background: #f5f7fa;
+            border: 1px solid#092f54;
+        }
+
+        .breadcrumbs .list{
+            overflow: inherit;
+            float: right;
+        }
+        .breadcrumbs-wrap .list{
+            overflow: inherit;
+        }
+        .breadcrumbs-wrap .inner{
+            width: 100%;
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+        
+        .breadcrumbs:after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .breadcrumbs .list li:first-child{
+            padding-left: 0;
+            background: none;
+        }
+
+        .breadcrumbs .list li{
+            line-height: 32px;
+            padding-top: 4px;
+        }
+
+        .breadcrumbs .list li{
+            float: left;
+            padding-left: 20px;
+        }
+     
+        .breadcrumbs-wrap .list li{
+            line-height: 32px;
+            padding-top: 4px;
+            background:url(arrow.png) no-repeat left 8px;
+        }
+        /* ------------------------------------------------- */
+
+        
+        .container {          
+            margin: 50px;
+        }
+        .콘텐츠-사이드바{
+            display: flex;
+            border-top: 1px solid black;
+        }
+        .sectionContents{
+            width: 70%;
+            border-right: 1px solid black;
+            border-top: 1px solid black;
+        }
+        .header1 {           
+            font-weight: bold;         
+            margin-bottom: 10px;
+        }
+        .sub-header1 {
+            width: 100%;
+            padding: 16px;
+            font-size: 18px;
+            border-radius: 15px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: rgb(51, 51, 51);
+            background-color: rgb(247, 248, 250);
+            border: 1px solid rgb(232, 233, 238);        
+        }
+        .btn-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            background-color: #004ea2;
+            text-decoration: none;
+            border-radius: 3px;
+        }
+        .section {
+            margin-bottom: 30px;
+            border-top: 2px solid #e5e5e5;
+            padding-top: 20px;
+        }
+        .section h2 {
+            font-size: 18px;
+           
+            margin-bottom: 10px;
+        }
+        .section span{
+            color: rgb(237, 28, 36);
+        }
+        .section p {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        .section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .section ul li {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+
+        .sidebar1 h3, .sidebar2 h3 {
+            margin-bottom: 10px;
+            margin-left: 0px;
+        }
+        .sidebar1 ul, .sidebar2 ul {
+            list-style: decimal;
+            padding-left: 0;
+        }
+        .sidebar1 ul li, .sidebar2 ul li {
+            font-size: 14px;
+            margin-bottom: 5px;
+            font-weight: bold;
+            margin-left: 13px;
+        }
+        .section li{
+            list-style: disc;
+        }
+    
+        
+        .sidebars {
+            margin-left: 40px;           
+        }
+        
+    
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="eg_logo.png" style="margin-left: 28px;"> 
+                <span class="text1">이 누리집은 대한민국 공식 전자정부 누리집입니다.</span>
+            </div>
+            <div class="header-links">
+                <a href="#" class="hlink1">for foreigner ▼</a> 
+                <a href="https://kids.gov.kr/main.ds" class="hlink2">어린이</a>
+                <a href="https://www.gov.kr/portal/govSumry?Mcode=11005" class="hlink3">정부24소개</a>
+                <a href="https://www.gov.kr/nlogin/?Mcode=10003" class="hlink4">로그인</a>
+                <a href="https://www.gov.kr/nlogin/" class="hlink5">인증센터</a>
+                <a href="#" class="hlink6">화면크기 <span>-</span> 100% <span>+</span></a>
+                </span>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <a href="과제.html">
+        <img src="정부24.png" style="height: 40px; margin-left: 30px; cursor: pointer;"></a>
+         <div class="nav-center">
+            <span class="button1">MyGOV</span>
+            <span class="button1">민원서비스</span>
+            <span class="button1">보조금24</span>
+            <span class="button1">정책정보</span>
+            <span class="button1">고객센터</span>
+        </div>
+        <div>
+            <img src="search.png" style="height: 30px; margin-right: 40px; cursor: pointer;">
+            <img src="menu.png"  style="height: 30px; margin-right: 80px; cursor: pointer;">
+        </div>
+    </nav>
+    <div class="breadcrumbs-wrap">
+        <div class="inner">
+            <div class="breadcrumbs">
+                <ul class="list">
+                    <li>home</li>
+                    <li>민원서비스</li>
+                    <li>여권 재발급 온라인 신청</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<!-- ------------------------------------------------------------------- -->
+<div class="container">
+    <div class="콘텐츠-사이드바">
+        <div class="sectionContents">
+            <div class="header1"><h1>여권 재발급 온라인 신청</h1><hr style="height: 2px;"></div>
+            <div class="sub-header1">유효기간 만료 등 사유로 여권을 다시 발급받기 위해 신청하는 서비스</div>
+            <div class="btn-container">
+            <a href="#" class="btn">신청하기</a>
+            </div>
+
+            <div class="section">
+                <h2><span><img src="메모장.png"> 어떤내용</span>
+                인지 궁금하시죠?</h2>
+                <hr style="border: 1px solid black;">
+                <p><strong>지원형태:</strong> 해당없음</p>
+                <p><strong>지원내용:</strong> 18세 이상 성인이 온라인을 통해 여권 재발급 신청을 하고 본인이 지정한 여권 사무대행기관에서 교부받는 서비스</p>
+            </div>
+                <div class="section">
+                    
+                    <h2><span><img src="사람.png"> 이런 분들</span>께 해당합니다.</h2>
+                    <hr style="border: 1px solid black;">
+                    <p><strong>지원대상:</strong></p>
+                    <ul style="margin-left: 100px;">
+                        <li>기존에 전자여권을 한 번이라도 발급 받은 이력이 있는 18세 이상의 우리 국민</li>
+                        <br>
+                        <li>아래 사유에 해당하는 경우 [정부24]에서는 신청이 불가하오니, 가까운 여권사무대행기관에 직접 방문하여 신청하여 주시기 바랍니다.</li>
+                        <li>  만 18세 미만 미성년자</li>
+                        <li>  생애 최초 전자여권 신청자</li>
+                        <li>외교관ㆍ관용ㆍ긴급 여권 신청자</li>
+                        <li>로마자성명 변경이 필요한자(혼인관계 변동으로 배우자 성의 변동이 발생한자 포함)</li>
+                        <li>개명 및 주민등록정보 정정자(개명 및 주민등록정보 정정 후 여권발급이력 존재 시 신청 가능)</li>
+                        <li>행정 제재자, 상습 분실자</li>
+                        <li>여권 신청일 기준 5년 이내 분실신고 이력 1회 이상자로 직전여권의 유효기간이 남아 있는 자</li>
+                        <br>
+                        <li>병역의무자 관련 온라인 신청 유의사항</li>
+                        <li>여권 재발급 신청 시 병역미필자의 경우 5년 유효기간 여권 발급만 가능합니다<br>
+                        추가서류 제출 후 10년 유효기간 여권을 발급받길 원하는 경우는 대행기관으로 방문하시길 부탁드립니다. <br>
+                        (예) 대체복무자로서 6개월 미만 소집해제예정일이 기재된 복무확인서 제출 후, 10년 유효기간 여권을 발급받기를 원하는 경우<br>
+                        (예) 병역미필자의 경우 37세말까지 받은 국외여행허가서 제출 후, 10년 유효기간 여권을 발급받기를 원하는 경우</li><br>
+                        <li> 재외국민은 재외동포365(https://www.g4k.go.kr)에서 신청하시기 바랍니다.</li>
+                    </ul>
+            </div>
+        </div>     
+
+        <div class="sidebars">
+            <div class="sidebar1">
+                <h3>분야별 서비스 Best5</h3>
+                <hr>
+                <ul>
+                    <li>여권 재발급 온라인 신청</li>
+                    <li>여권 발급 예약 조회</li>
+                    <li>여권명칭증명서 발급</li>
+                    <li>여권 발급 상태 조회</li>
+                    <li>여권 정보 전위 확인</li>
+                </ul>
+            </div>
+            <div class="sidebar2">
+                <h3>기관별 서비스 Best5</h3>
+                <hr>
+                <ul>
+                    <li>여권정보증명서(영문)발급</li>
+                    <li>국민외교아카데미 대학생 외교 연수 과정</li>
+                    <li>해외안전여행대학생 서포터스</li>
+                    <li>외교부 소식지 제공 서비스</li>
+                    <li>여권 유효기간 만료일 사전알림</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
