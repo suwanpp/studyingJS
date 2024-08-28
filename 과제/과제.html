@@ -126,7 +126,17 @@
            border-color: rgb(64, 64, 233);
            border-radius: 10px;
         }
-
+        .search-box{
+            display: flex;
+        }
+        .tit{
+            width: 200px;
+            text-align: center;
+            margin-top: 20px;
+            margin-right: 400px;
+            font-weight: bold;
+        }
+        
         label{
             position: relative;
             margin-right: 20px;
@@ -257,13 +267,12 @@
         <div class="container">
             <div class="left-box">                
                 <img src="메인.png" style="height: 400px; width: 1300px;">
-                <div class="serach-box">
+                <div class="search-box">
                     <div class="tit"> 자주찾는 검색</div>
                     <div class="input-search">                        
                             <label>
-                            <input type="text" class="main-input-search"     placeholder="찾으시는 서비스를 입력하세요" title="검색어 입력">
-                            <button type="button">
-                             <img src="돋보기.PNG" style="cursor: pointer;"></button>
+                            <input type="text" class="main-input-search"  placeholder="    찾으시는 서비스를 입력하세요" title="검색어 입력">
+                            
                         </label>                       
                     </div>
                 </div>
